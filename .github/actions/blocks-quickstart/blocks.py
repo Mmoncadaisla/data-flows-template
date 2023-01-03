@@ -1,6 +1,9 @@
 """
-python blocks.py -b $GITHUB_REF_NAME -r "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" \
--n ${{ inputs.block_name }} -i ${{ inputs.image_uri }} --region ${{ inputs.region }}
+python blocks.py -b $GITHUB_REF_NAME \
+-r "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" \
+-n ${{ inputs.block_name }} \
+-i ${{ inputs.image_uri }} \
+--region ${{ inputs.region }}
 """
 import argparse
 from prefect.filesystems import GitHub
@@ -8,6 +11,7 @@ from prefect_gcp.cloud_run import CloudRunJob
 from prefect_gcp.credentials import GcpCredentials
 
 REPO = "https://github.com/anna-geller/prefect-cloud-gcp"
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-b", "--branch", default="main")
 parser.add_argument("-r", "--repo", default=REPO)
