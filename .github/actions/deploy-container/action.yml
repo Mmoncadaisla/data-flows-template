@@ -88,6 +88,7 @@ runs:
         export EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')
         gcloud compute instances create-with-container "${{ inputs.machine_name }}" \
           --zone "${{ inputs.zone }}" \
+          --resource-policies=prefect-vm-schedule \
           --machine-type "${{ inputs.machine_type }}" \
           --service-account $EMAIL \
           --scopes "cloud-platform" \
