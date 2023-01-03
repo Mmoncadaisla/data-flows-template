@@ -1,16 +1,8 @@
 from setuptools import setup, find_packages
 
-
-def get_version():
-    _version = {}
-    with open("data-flows/_version.py") as fp:
-        exec(fp.read(), _version)
-    return _version["__version__"]
-
-
 setup(
     name="data-flows",
-    version=get_version(),
+    version="0.0.1",
     description="Data flows template",
     url="https://github.com/Mmoncadaisla/data-flows",
     author="Mmoncadaisla",
