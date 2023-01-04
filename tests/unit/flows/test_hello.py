@@ -1,6 +1,6 @@
 import pytest
 import logging
-from dataflows.flows.hello import hello
+from dataflows.flows.hello_flow import hello
 
 logger = logging.getLogger(__name__)
 

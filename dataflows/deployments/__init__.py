@@ -1,4 +1,4 @@
-from dataflow.deployments.hello import deploy_hello_flow
+from dataflow.deployments.hello_flow import deploy_hello_flow
 
 
 def deploy_flows():
