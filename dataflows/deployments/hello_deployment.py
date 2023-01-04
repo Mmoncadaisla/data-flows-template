@@ -15,7 +15,7 @@ def deploy_hello_flow():
         storage=storage,
         path="hello_flow",
         infrastructure=infrastructure,
-        schedule=CronSchedule(cron="* * * * *", timezone="UTC"),
+        schedule=CronSchedule(cron="0 12 1 * *", timezone="UTC"),
     )
     deployment.apply()
 

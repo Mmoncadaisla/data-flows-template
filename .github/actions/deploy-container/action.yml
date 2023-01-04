@@ -40,11 +40,11 @@ inputs:
   machine-start-schedule:
     description: 'VM schedule cron expression for start in UTC'
     required: false
-    default: '0 10 * * 1-5'
+    default: '0 8 * * 1-5'
   machine-stop-schedule:
     description: 'VM schedule cron expression for stop in UTC'
     required: false
-    default: '0 18 * * 1-5'
+    default: '0 16 * * 1-5'
 runs:
   using: "composite"
   steps:
