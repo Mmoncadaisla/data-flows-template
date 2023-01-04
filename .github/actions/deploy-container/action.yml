@@ -105,5 +105,5 @@ runs:
       continue-on-error: false
       run: |
         gcloud compute instances add-resource-policies "${{ inputs.machine_name }}" \
-          --resouce-policies='prefect-vm-schedule' \
+          --resource-policies='prefect-vm-schedule' \
           --zone "${{ inputs.zone }}"
