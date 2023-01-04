@@ -11,8 +11,10 @@ setup(
     packages=find_packages(),
     install_requires=[
         "prefect==2.7.5",
-        "google-api-python-client==2.70.0",
+        "google-api-python-client>=2.20.0",
         "prefect-gcp==0.2.2",
+        "prefect-gcp[bigquery]",
+        "prefect-gcp[cloud_storage]",
         "prefect-dask==0.2.2",
     ],
     classifiers=[],
