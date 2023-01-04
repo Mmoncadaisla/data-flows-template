@@ -82,10 +82,8 @@ runs:
       shell: bash
       continue-on-error: false
       run: |
-        export EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')
         gcloud compute resource-policies create instance-schedule prefect-vm-schedule \
           --description='Schedule for Prefect VM start and stop times' \
-          --service-account $EMAIL \
           --region="${{ inputs.region }}" \
           --vm-start-schedule="${{ inputs.machine-start-schedule }}" \
           --vm-stop-schedule="${{ inputs.machine-stop-schedule }}" \
@@ -106,8 +104,6 @@ runs:
       shell: bash
       continue-on-error: false
       run: |
-        export EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')
         gcloud compute instances add-resource-policies "${{ inputs.machine_name }}" \
-          --service-account $EMAIL \
           --resource-policies='prefect-vm-schedule' \
           --zone "${{ inputs.zone }}"

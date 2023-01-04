@@ -16,4 +16,6 @@ ENV PYTHONUNBUFFERED True
 
 COPY dataflows/flows/ /opt/prefect/flows/
 
+RUN prefect block register -m prefect_gcp
+
 ENTRYPOINT ["prefect", "agent", "start", "-q", "default"]
