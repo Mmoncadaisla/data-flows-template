@@ -1,6 +1,6 @@
 import pytest
 import logging
-from dataflows.flows.hello_flow import hello
+from dataflows.flows.hello_flow import hello_flow
 
 logger = logging.getLogger(__name__)
 
@@ -11,7 +11,7 @@ def test_hello(user_input, caplog):
     caplog.set_level(logging.INFO)
 
     # When
-    hello(user_input=user_input)
+    hello_flow(user_input=user_input)
 
     # Then
     assert f"Hello from Prefect, {user_input}! 🚀" in caplog.text
