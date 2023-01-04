@@ -85,8 +85,8 @@ runs:
         gcloud compute resource-policies create instance-schedule prefect-vm-schedule \
           --description='Schedule for Prefect VM start and stop times' \
           --region="${{ inputs.region }}" \
-          --vm-start-schedule='"${{ inputs.machine-start-schedule }}"' \
-          --vm-stop-schedule='"${{ inputs.machine-stop-schedule }}"' \
+          --vm-start-schedule="${{ inputs.machine-start-schedule }}" \
+          --vm-stop-schedule="${{ inputs.machine-stop-schedule }}" \
           --timezone=UTC
 
     - id: deploy-vm
