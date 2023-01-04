@@ -14,11 +14,8 @@ def deploy_hello_flow():
         work_queue_name="default",
         storage=storage,
         path="hello_flow",
+        tags=["production"],
         infrastructure=infrastructure,
         schedule=CronSchedule(cron="0 12 1 * *", timezone="UTC"),
     )
     deployment.apply()
-
-
-if __name__ == "__main__":
-    deploy_hello_flow()
