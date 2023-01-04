@@ -71,9 +71,16 @@ runs:
       continue-on-error: true
       shell: bash
 
-    - id: create-instance-schedule
+    - id: remove-instance-schedule-if-exists
       shell: bash
       continue-on-error: true
+      run: |
+        gcloud compute resource-policies delete prefect-vm-schedule \
+          --region="${{ inputs.region }}"
+
+    - id: create-instance-schedule
+      shell: bash
+      continue-on-error: false
       run: |
         gcloud compute resource-policies create instance-schedule prefect-vm-schedule \
           --description='Schedule for Prefect VM start and stop times' \
@@ -88,8 +95,15 @@ runs:
         export EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')
         gcloud compute instances create-with-container "${{ inputs.machine_name }}" \
           --zone "${{ inputs.zone }}" \
-          --resource-policies='prefect-vm-schedule' \
           --machine-type "${{ inputs.machine_type }}" \
           --service-account $EMAIL \
           --scopes "cloud-platform" \
           --container-image "${{ env.IMAGE_URI }}"
+
+    - id: add-resource-policy
+      shell: bash
+      continue-on-error: false
+      run: |
+        gcloud compute instances add-resource-policies "${{ inputs.machine_name }}" \
+          --resouce-policies='prefect-vm-schedule' \
+          --zone "${{ inputs.zone }}"
