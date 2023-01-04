@@ -11,7 +11,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         "prefect==2.7.5",
-        "prefect-gcp==0.2.1",
+        "google-api-python-client==2.70.0",
+        "prefect-gcp==0.2.2",
         "prefect-dask==0.2.2",
     ],
     classifiers=[],
