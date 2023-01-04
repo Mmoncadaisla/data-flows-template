@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="data-flows",
+    name="dataflows",
     version="0.0.1",
     description="Data flows template",
     url="https://github.com/Mmoncadaisla/data-flows",
