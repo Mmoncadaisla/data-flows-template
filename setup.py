@@ -16,6 +16,7 @@ setup(
         "prefect-gcp[bigquery]",
         "prefect-gcp[cloud_storage]",
         "prefect-dask==0.2.2",
+        "gcsfs"
     ],
     classifiers=[],
 )

@@ -9,6 +9,9 @@ gcsfs
 pandas
 pandas-gbq
 prefect-gcp
+prefect-gcp[bigquery]
+prefect-gcp[cloud_storage]
+prefect-gcp[cloud_run]
 psycopg2-binary
 pydata-google-auth
 pygit2
