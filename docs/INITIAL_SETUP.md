@@ -83,6 +83,9 @@ This will generate the JSON key file, of which contents you can copy and paste i
 1. From the GitHub Actions tab, click on the `Create Prefect blocks & GCP Infrastructure` workflow and click on `Run workflow`:
    ![GitHub Actions Workflow](img/github_workflows_run.png)
 
+2. Check the logs to see if the workflow succeeded. If it did, you should see the following output:
+   ![GitHub Actions output](img/github_actions_output.png)
+
 This will perform the following actions:
 
 - Create a Prefect Block Storage named `default` using GCS and a Prefect Block Infrastructure using Cloud Run named `default`
@@ -90,6 +93,3 @@ This will perform the following actions:
 - Create a VM in GCP Compute Engine named `prefect-cloud-vm` and install Prefect Cloud agent on it through a Docker container that uses an artifact built using [this `Dockerfile`](../Dockerfile) with a schedule attached to it so it starts and stops at a certain time every weekday (by default 8am-5pm UTC)
 
     >**NOTE**: You can check the output of an example successful workflow run [here](/assets/setup_logs)
-
-1. Check the logs to see if the workflow succeeded. If it did, you should see the following output:
-   ![GitHub Actions output](img/github_actions_output.png)
