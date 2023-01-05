@@ -7,7 +7,6 @@ storage = Block.load("gcs/default")
 infrastructure = Block.load("cloud-run-job/develop")
 
 
-# Test deployment change CI/CD
 def deploy_hello_flow():
     deployment = Deployment.build_from_flow(
         flow=hello_flow,

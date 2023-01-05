@@ -2,7 +2,6 @@ from prefect import flow, get_run_logger
 from platform import node, platform
 
 
-# Test file change 1
 @flow(name="hello_flow")
 def hello_flow(user_input: str = "World"):
     logger = get_run_logger()
