@@ -5,5 +5,5 @@ FLOW_DEPLOYMENT_DICT = flow_deployment_dict = {
 }
 
 DEPLOYMENT_FILE_FUNC_DICT = {
-    "hello_deployment": "deploy_hello_flow"
+    "hello_deployment": deploy_hello_flow
 }
