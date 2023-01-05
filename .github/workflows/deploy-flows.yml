@@ -9,14 +9,6 @@ on:
     paths:
       - "dataflows/flows/**.py"
       - "dataflows/deployments/**.py"
-  pull_request:
-    branches:
-      - main
-      - development
-    paths:
-      - "dataflows/flows/**.py"
-      - "dataflows/deployments/**.py"
-
 
 jobs:
   deploy-flows:
