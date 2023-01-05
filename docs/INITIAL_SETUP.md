@@ -92,4 +92,4 @@ This will perform the following actions:
 
 - Create a VM in GCP Compute Engine named `prefect-cloud-vm` and install Prefect Cloud agent on it through a Docker container that uses an artifact built using [this `Dockerfile`](../Dockerfile) with a schedule attached to it so it starts and stops at a certain time every weekday (by default 8am-5pm UTC)
 
-    >**NOTE**: You can check the output of an example successful workflow run [here](/assets/setup_logs)
+    >**NOTE**: You can check the output of an example successful workflow run [here](assets/setup_logs)
