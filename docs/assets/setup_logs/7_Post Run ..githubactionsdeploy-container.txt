@@ -1,0 +1,8 @@
+2023-01-05T11:10:42.7926958Z Post job cleanup.
+2023-01-05T11:10:42.7955736Z Post job cleanup.
+2023-01-05T11:10:42.9274716Z [command]/usr/bin/docker logout us-east1-docker.pkg.dev
+2023-01-05T11:10:42.9483729Z Removing login credentials for us-east1-docker.pkg.dev
+2023-01-05T11:10:42.9605062Z Post job cleanup.
+2023-01-05T11:10:43.0344508Z Removed exported credentials at "/home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json".
+2023-01-05T11:10:43.0447679Z Post job cleanup.
+2023-01-05T11:10:43.1206611Z Removed exported credentials at "/home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json".

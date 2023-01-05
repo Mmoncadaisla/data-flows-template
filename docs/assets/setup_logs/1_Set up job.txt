@@ -1,0 +1,35 @@
+2023-01-05T11:06:43.4046843Z Current runner version: '2.300.2'
+2023-01-05T11:06:43.4074058Z ##[group]Operating System
+2023-01-05T11:06:43.4074832Z Ubuntu
+2023-01-05T11:06:43.4075254Z 22.04.1
+2023-01-05T11:06:43.4075710Z LTS
+2023-01-05T11:06:43.4076125Z ##[endgroup]
+2023-01-05T11:06:43.4076625Z ##[group]Runner Image
+2023-01-05T11:06:43.4077131Z Image: ubuntu-22.04
+2023-01-05T11:06:43.4077600Z Version: 20221212.1
+2023-01-05T11:06:43.4078311Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20221212.1/images/linux/Ubuntu2204-Readme.md
+2023-01-05T11:06:43.4079162Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20221212.1
+2023-01-05T11:06:43.4079820Z ##[endgroup]
+2023-01-05T11:06:43.4080322Z ##[group]Runner Image Provisioner
+2023-01-05T11:06:43.4080818Z 2.0.98.1
+2023-01-05T11:06:43.4081256Z ##[endgroup]
+2023-01-05T11:06:43.4082648Z ##[group]GITHUB_TOKEN Permissions
+2023-01-05T11:06:43.4083458Z Actions: write
+2023-01-05T11:06:43.4083909Z Checks: write
+2023-01-05T11:06:43.4084349Z Contents: write
+2023-01-05T11:06:43.4085077Z Deployments: write
+2023-01-05T11:06:43.4085524Z Discussions: write
+2023-01-05T11:06:43.4086041Z Issues: write
+2023-01-05T11:06:43.4086476Z Metadata: read
+2023-01-05T11:06:43.4086997Z Packages: write
+2023-01-05T11:06:43.4087443Z Pages: write
+2023-01-05T11:06:43.4087889Z PullRequests: write
+2023-01-05T11:06:43.4088407Z RepositoryProjects: write
+2023-01-05T11:06:43.4088944Z SecurityEvents: write
+2023-01-05T11:06:43.4089440Z Statuses: write
+2023-01-05T11:06:43.4089896Z ##[endgroup]
+2023-01-05T11:06:43.4093863Z Secret source: Actions
+2023-01-05T11:06:43.4094569Z Prepare workflow directory
+2023-01-05T11:06:43.4935297Z Prepare all required actions
+2023-01-05T11:06:43.5125507Z Getting action download info
+2023-01-05T11:06:45.0483830Z Download action repository 'actions/checkout@v3' (SHA:755da8c3cf115ac066823e79a1e1788f8940201b)
