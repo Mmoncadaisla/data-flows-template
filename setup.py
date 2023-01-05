@@ -1,16 +1,8 @@
 from setuptools import setup, find_packages
 
-
-def get_version():
-    _version = {}
-    with open("data-flows/_version.py") as fp:
-        exec(fp.read(), _version)
-    return _version["__version__"]
-
-
 setup(
-    name="data-flows",
-    version=get_version(),
+    name="dataflows",
+    version="0.0.1",
     description="Data flows template",
     url="https://github.com/Mmoncadaisla/data-flows",
     author="Mmoncadaisla",
@@ -19,8 +11,12 @@ setup(
     packages=find_packages(),
     install_requires=[
         "prefect==2.7.5",
-        "prefect-gcp==0.2.1",
+        "google-api-python-client>=2.20.0",
+        "prefect-gcp==0.2.2",
+        "prefect-gcp[bigquery]",
+        "prefect-gcp[cloud_storage]",
         "prefect-dask==0.2.2",
+        "gcsfs"
     ],
     classifiers=[],
 )

@@ -1,0 +1,65 @@
+name: "Create Prefect blocks & GCP Infrastructure"
+on:
+  workflow_dispatch:
+    inputs:
+      region:
+        description: GCP region
+        required: true
+        default: "us-east1"
+        type: string
+      zone:
+        description: Zone in the selected GCP region
+        required: true
+        default: "us-east1-b"
+        type: string
+      artifact_repository:
+        description: Artifact Registry Repository
+        required: true
+        default: "prefect"
+        type: string
+      image_name:
+        description: Artifact Container Name
+        required: true
+        default: "deployments"
+        type: string
+      machine_type:
+        description: GCP Compute Engine instance type
+        required: true
+        default: "e2-micro"
+        type: string
+      block_name:
+        description: "GitHub and CloudRunJob block name"
+        required: false
+        default: "default"
+        type: string
+      gcp_creds_block_name:
+        description: "Name of the GcpCredentials block"
+        required: false
+        default: "default"
+        type: string
+
+jobs:
+  deploy-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: deploy-container
+        uses: ./.github/actions/deploy-container
+        with:
+          prefect_api_key: ${{ secrets.PREFECT_API_KEY }}
+          prefect_api_url: ${{ secrets.PREFECT_API_URL }}
+          artifact_repository: ${{ github.event.inputs.artifact_repository }} # optional
+          region: ${{ github.event.inputs.region }} # optional
+          gcp_credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          #          gcp_sa_email: ${{ secrets.GCP_SA_EMAIL }}
+          zone: ${{ github.event.inputs.zone }} # optional
+          machine_type: ${{ github.event.inputs.machine_type }} # optional
+
+      - id: create-blocks
+        uses: ./.github/actions/blocks-quickstart
+        with:
+          prefect_api_key: ${{ secrets.PREFECT_API_KEY }}
+          prefect_api_url: ${{ secrets.PREFECT_API_URL }}
+          image_uri: ${{ env.IMAGE_URI }}
+          block_name: ${{ github.event.inputs.block_name }} # optional
+          region: ${{ github.event.inputs.region }} # optional

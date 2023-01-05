@@ -1,0 +1,51 @@
+name: Deploy flows
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - development
+    paths:
+      - "dataflows/flows/**.py"
+      - "dataflows/deployments/**.py"
+
+jobs:
+  deploy-flows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            dataflows/flows/[!_]*.py
+            dataflows/deployments/[!_]*.py
+
+      - name: Set up Python
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: 'pip'
+
+      - id: install-prefect
+        run: |
+          pip install prefect
+          pip install .
+        shell: bash
+
+      - id: login-prefect
+        run: |
+          prefect config set PREFECT_API_KEY=${{ secrets.PREFECT_API_KEY }}
+          prefect config set PREFECT_API_URL=${{ secrets.PREFECT_API_URL }}
+        shell: bash
+
+      - run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+              python deployments.py -f "$file"
+          done
+        shell: bash
