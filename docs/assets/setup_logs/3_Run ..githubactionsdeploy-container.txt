@@ -1,0 +1,397 @@
+2023-01-05T11:06:46.8473555Z Prepare all required actions
+2023-01-05T11:06:46.8474025Z Getting action download info
+2023-01-05T11:06:47.0622048Z Download action repository 'google-github-actions/auth@v1' (SHA:ef5d53e30bbcd8d0836f4288f5e50ff3e086997d)
+2023-01-05T11:06:47.4789474Z Download action repository 'google-github-actions/setup-gcloud@v1' (SHA:d51b5346f85640ec2aa2fa057354d2b82c2fcbce)
+2023-01-05T11:06:47.9412563Z ##[group]Run ./.github/actions/deploy-container
+2023-01-05T11:06:47.9412948Z with:
+2023-01-05T11:06:47.9413384Z   prefect_api_key: ***
+2023-01-05T11:06:47.9413959Z   prefect_api_url: ***
+2023-01-05T11:06:47.9414288Z   artifact_repository: prefect
+2023-01-05T11:06:47.9414605Z   region: us-east1
+2023-01-05T11:06:47.9419418Z   gcp_credentials_json: ***
+2023-01-05T11:06:47.9419737Z   zone: us-east1-b
+2023-01-05T11:06:47.9420029Z   machine_type: e2-micro
+2023-01-05T11:06:47.9420348Z   image_name: deployments
+2023-01-05T11:06:47.9420675Z   machine_name: prefect-cloud-vm
+2023-01-05T11:06:47.9421027Z   machine-start-schedule: 0 8 * * 1-5
+2023-01-05T11:06:47.9421662Z   machine-stop-schedule: 0 16 * * 1-5
+2023-01-05T11:06:47.9421986Z ##[endgroup]
+2023-01-05T11:06:47.9679268Z ##[group]Run google-github-actions/auth@v1
+2023-01-05T11:06:47.9679644Z with:
+2023-01-05T11:06:47.9684475Z   credentials_json: ***
+2023-01-05T11:06:47.9684801Z   create_credentials_file: true
+2023-01-05T11:06:47.9685159Z   export_environment_variables: true
+2023-01-05T11:06:47.9685502Z   cleanup_credentials: true
+2023-01-05T11:06:47.9685827Z   access_token_lifetime: 3600s
+2023-01-05T11:06:47.9686254Z   access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+2023-01-05T11:06:47.9686649Z   retries: 0
+2023-01-05T11:06:47.9686945Z   id_token_include_email: false
+2023-01-05T11:06:47.9687259Z ##[endgroup]
+2023-01-05T11:06:48.0448171Z Created credentials file at "/home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json"
+2023-01-05T11:06:48.0578873Z ##[group]Run google-github-actions/setup-gcloud@v1
+2023-01-05T11:06:48.0579260Z with:
+2023-01-05T11:06:48.0579541Z   version: latest
+2023-01-05T11:06:48.0579824Z env:
+2023-01-05T11:06:48.0580286Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:06:48.0580928Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:06:48.0581840Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:06:48.0582324Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:06:48.0582734Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:06:48.0583112Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:06:48.0583479Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:06:48.0583858Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:06:48.0584194Z ##[endgroup]
+2023-01-05T11:06:49.2347671Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/f2f1f1c8-4c03-444f-9d16-344bdd3e1447 -f /home/runner/work/_temp/ea66fe44-2444-49c3-a16f-52e3ea01e1bb
+2023-01-05T11:07:05.1938737Z Successfully authenticated
+2023-01-05T11:07:05.2073200Z Prepare all required actions
+2023-01-05T11:07:05.2073883Z Getting action download info
+2023-01-05T11:07:05.6591547Z Download action repository 'docker/login-action@v2' (SHA:f4ef78c080cd8ba55a85445d5b36e214a81df20a)
+2023-01-05T11:07:06.2595930Z ##[group]Run ./.github/actions/container-image
+2023-01-05T11:07:06.2596288Z with:
+2023-01-05T11:07:06.2596690Z   prefect_api_key: ***
+2023-01-05T11:07:06.2597247Z   prefect_api_url: ***
+2023-01-05T11:07:06.2602144Z   gcp_credentials_json: ***
+2023-01-05T11:07:06.2602472Z   region: us-east1
+2023-01-05T11:07:06.2602778Z   artifact_repository: prefect
+2023-01-05T11:07:06.2603107Z   image_name: deployments
+2023-01-05T11:07:06.2603423Z   dockerfile_path: Dockerfile
+2023-01-05T11:07:06.2603717Z env:
+2023-01-05T11:07:06.2604157Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2604948Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2605545Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2606025Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2606430Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2606795Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2607168Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2607545Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2607971Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:06.2608343Z ##[endgroup]
+2023-01-05T11:07:06.2657700Z ##[group]Run google-github-actions/auth@v1
+2023-01-05T11:07:06.2658050Z with:
+2023-01-05T11:07:06.2663069Z   credentials_json: ***
+2023-01-05T11:07:06.2663397Z   create_credentials_file: true
+2023-01-05T11:07:06.2663752Z   export_environment_variables: true
+2023-01-05T11:07:06.2664100Z   cleanup_credentials: true
+2023-01-05T11:07:06.2664419Z   access_token_lifetime: 3600s
+2023-01-05T11:07:06.2664845Z   access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+2023-01-05T11:07:06.2665237Z   retries: 0
+2023-01-05T11:07:06.2665526Z   id_token_include_email: false
+2023-01-05T11:07:06.2665827Z env:
+2023-01-05T11:07:06.2666273Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2666913Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2667499Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json
+2023-01-05T11:07:06.2667978Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2668371Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2668740Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2669098Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2669472Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.2669901Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:06.2670288Z ##[endgroup]
+2023-01-05T11:07:06.3458434Z Created credentials file at "/home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json"
+2023-01-05T11:07:06.3497497Z ##[warning]Overwriting existing environment variable CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE (was: "/home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json")
+2023-01-05T11:07:06.3508985Z ##[warning]Overwriting existing environment variable GOOGLE_APPLICATION_CREDENTIALS (was: "/home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json")
+2023-01-05T11:07:06.3511543Z ##[warning]Overwriting existing environment variable GOOGLE_GHA_CREDS_PATH (was: "/home/runner/work/data-flows/data-flows/gha-creds-bb17eb51bb2d31fb.json")
+2023-01-05T11:07:06.3513582Z ##[warning]Overwriting existing environment variable CLOUDSDK_CORE_PROJECT (was: "nivaria-data-platform")
+2023-01-05T11:07:06.3515487Z ##[warning]Overwriting existing environment variable CLOUDSDK_PROJECT (was: "nivaria-data-platform")
+2023-01-05T11:07:06.3517483Z ##[warning]Overwriting existing environment variable GCLOUD_PROJECT (was: "nivaria-data-platform")
+2023-01-05T11:07:06.3519333Z ##[warning]Overwriting existing environment variable GCP_PROJECT (was: "nivaria-data-platform")
+2023-01-05T11:07:06.3521206Z ##[warning]Overwriting existing environment variable GOOGLE_CLOUD_PROJECT (was: "nivaria-data-platform")
+2023-01-05T11:07:06.3580110Z ##[group]Run google-github-actions/setup-gcloud@v1
+2023-01-05T11:07:06.3580484Z with:
+2023-01-05T11:07:06.3580757Z   version: latest
+2023-01-05T11:07:06.3581030Z env:
+2023-01-05T11:07:06.3581652Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:06.3582277Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:06.3583001Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:06.3583490Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.3583891Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.3584281Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.3584645Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.3585020Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:06.3585448Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:06.3585824Z ##[endgroup]
+2023-01-05T11:07:07.2831831Z Successfully authenticated
+2023-01-05T11:07:07.3005580Z ##[group]Run gcloud artifacts repositories create prefect --repository-format=docker --location=us-east1
+2023-01-05T11:07:07.3006324Z [36;1mgcloud artifacts repositories create prefect --repository-format=docker --location=us-east1[0m
+2023-01-05T11:07:07.3066810Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:07:07.3067250Z env:
+2023-01-05T11:07:07.3067717Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:07.3068351Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:07.3068942Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:07.3069427Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:07.3069825Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:07.3070191Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:07.3070549Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:07.3070924Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:07.3071370Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:07.3071748Z ##[endgroup]
+2023-01-05T11:07:08.4450573Z ERROR: (gcloud.artifacts.repositories.create) ALREADY_EXISTS: the repository already exists
+2023-01-05T11:07:08.5334575Z ##[error]Process completed with exit code 1.
+2023-01-05T11:07:08.5363163Z ##[group]Run echo "RAW_IMAGE=us-east1-docker.pkg.dev/$GCP_PROJECT/prefect/deployments" >> $GITHUB_ENV
+2023-01-05T11:07:08.5363828Z [36;1mecho "RAW_IMAGE=us-east1-docker.pkg.dev/$GCP_PROJECT/prefect/deployments" >> $GITHUB_ENV[0m
+2023-01-05T11:07:08.5364586Z [36;1mecho "IMAGE_URI=us-east1-docker.pkg.dev/$GCP_PROJECT/prefect/deployments:$GITHUB_SHA" >> $GITHUB_ENV[0m
+2023-01-05T11:07:08.5365133Z [36;1mecho "uri=$(echo $IMAGE_URI)" >> $GITHUB_OUTPUT[0m
+2023-01-05T11:07:08.5417998Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:07:08.5418384Z env:
+2023-01-05T11:07:08.5418860Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5419500Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5420096Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5420573Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5420974Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5421471Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5421863Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5422246Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5422682Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:08.5423060Z ##[endgroup]
+2023-01-05T11:07:08.5555766Z ##[group]Run docker/login-action@v2
+2023-01-05T11:07:08.5556075Z with:
+2023-01-05T11:07:08.5556356Z   registry: us-east1-docker.pkg.dev
+2023-01-05T11:07:08.5556672Z   username: _json_key
+2023-01-05T11:07:08.5561143Z   password: ***
+2023-01-05T11:07:08.5561436Z   ecr: auto
+2023-01-05T11:07:08.5561711Z   logout: true
+2023-01-05T11:07:08.5561974Z env:
+2023-01-05T11:07:08.5562537Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5563148Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5563741Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:08.5564230Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5564628Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5565003Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5565369Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5565752Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:08.5566185Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:08.5566706Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:07:08.5567339Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:07:08.5567818Z ##[endgroup]
+2023-01-05T11:07:08.6843442Z Logging into us-east1-docker.pkg.dev...
+2023-01-05T11:07:09.4836852Z Login Succeeded!
+2023-01-05T11:07:09.4894860Z ##[group]Run docker build -q --build-arg PREFECT_API_KEY=*** --build-arg PREFECT_API_URL=*** -t "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments" -f Dockerfile .
+2023-01-05T11:07:09.4896105Z [36;1mdocker build -q --build-arg PREFECT_API_KEY=*** --build-arg PREFECT_API_URL=*** -t "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments" -f Dockerfile .[0m
+2023-01-05T11:07:09.4897089Z [36;1mdocker tag "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments" "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba"[0m
+2023-01-05T11:07:09.4897860Z [36;1mdocker push "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments"[0m
+2023-01-05T11:07:09.4898551Z [36;1mdocker push "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba"[0m
+2023-01-05T11:07:09.4952189Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:07:09.4953504Z env:
+2023-01-05T11:07:09.4953967Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:09.4954728Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:09.4955353Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:07:09.4955834Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:07:09.4956228Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:07:09.4956596Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:09.4956972Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:07:09.4957350Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:07:09.4957796Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:07:09.4958319Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:07:09.4958952Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:07:09.4959448Z ##[endgroup]
+2023-01-05T11:08:02.5396169Z sha256:8699bcc37fb28c2d0e17d6ad6108dc218083762e3572062001e9945e06c87b61
+2023-01-05T11:08:02.5831276Z Using default tag: latest
+2023-01-05T11:08:02.5853394Z The push refers to repository [us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments]
+2023-01-05T11:08:02.6468968Z eddef87f10a8: Preparing
+2023-01-05T11:08:02.6469880Z 7271a875b234: Preparing
+2023-01-05T11:08:02.6470177Z 1dd2d1154208: Preparing
+2023-01-05T11:08:02.6470475Z 4eca1cb55695: Preparing
+2023-01-05T11:08:02.6470772Z b7a87f159694: Preparing
+2023-01-05T11:08:02.6471069Z c938b69ebbee: Preparing
+2023-01-05T11:08:02.6471502Z ccde0ac320d2: Preparing
+2023-01-05T11:08:02.6472542Z ca58ff4a49fd: Preparing
+2023-01-05T11:08:02.6472911Z 2a00eb0c8c64: Preparing
+2023-01-05T11:08:02.6473322Z 29c1749bb840: Preparing
+2023-01-05T11:08:02.6473670Z 214c5ced380f: Preparing
+2023-01-05T11:08:02.6474018Z 06c3a4b08733: Preparing
+2023-01-05T11:08:02.6474374Z a7142c30f7fa: Preparing
+2023-01-05T11:08:02.6474738Z 0dcd7928f919: Preparing
+2023-01-05T11:08:02.6475090Z 9bfb7491506e: Preparing
+2023-01-05T11:08:02.6475449Z f9ec282bb452: Preparing
+2023-01-05T11:08:02.6475799Z 52cc52935146: Preparing
+2023-01-05T11:08:02.6476139Z ec3c4788435a: Preparing
+2023-01-05T11:08:02.6476493Z 8a70d251b653: Preparing
+2023-01-05T11:08:02.6476838Z c938b69ebbee: Waiting
+2023-01-05T11:08:02.6477195Z ccde0ac320d2: Waiting
+2023-01-05T11:08:02.6477536Z ca58ff4a49fd: Waiting
+2023-01-05T11:08:02.6477879Z 2a00eb0c8c64: Waiting
+2023-01-05T11:08:02.6478287Z 29c1749bb840: Waiting
+2023-01-05T11:08:02.6478633Z 214c5ced380f: Waiting
+2023-01-05T11:08:02.6478973Z 06c3a4b08733: Waiting
+2023-01-05T11:08:02.6479316Z a7142c30f7fa: Waiting
+2023-01-05T11:08:02.6479650Z 0dcd7928f919: Waiting
+2023-01-05T11:08:02.6479986Z 9bfb7491506e: Waiting
+2023-01-05T11:08:02.6480328Z f9ec282bb452: Waiting
+2023-01-05T11:08:02.6480660Z 52cc52935146: Waiting
+2023-01-05T11:08:02.6480996Z ec3c4788435a: Waiting
+2023-01-05T11:08:02.6481325Z 8a70d251b653: Waiting
+2023-01-05T11:08:03.9661674Z b7a87f159694: Pushed
+2023-01-05T11:08:04.0556337Z 7271a875b234: Pushed
+2023-01-05T11:08:04.0680994Z eddef87f10a8: Pushed
+2023-01-05T11:08:04.8618422Z 4eca1cb55695: Pushed
+2023-01-05T11:08:05.1769364Z c938b69ebbee: Pushed
+2023-01-05T11:08:05.4324782Z ccde0ac320d2: Pushed
+2023-01-05T11:08:05.8028372Z ca58ff4a49fd: Pushed
+2023-01-05T11:08:06.6468157Z 2a00eb0c8c64: Pushed
+2023-01-05T11:08:07.1619783Z 214c5ced380f: Pushed
+2023-01-05T11:08:08.7785806Z 0dcd7928f919: Pushed
+2023-01-05T11:08:08.9469886Z 9bfb7491506e: Layer already exists
+2023-01-05T11:08:09.0661340Z 06c3a4b08733: Pushed
+2023-01-05T11:08:09.1071848Z f9ec282bb452: Layer already exists
+2023-01-05T11:08:09.3514095Z ec3c4788435a: Layer already exists
+2023-01-05T11:08:09.4677721Z 52cc52935146: Layer already exists
+2023-01-05T11:08:09.4986677Z 8a70d251b653: Layer already exists
+2023-01-05T11:08:10.5456304Z 1dd2d1154208: Pushed
+2023-01-05T11:08:13.4697529Z 29c1749bb840: Pushed
+2023-01-05T11:08:21.8910538Z a7142c30f7fa: Pushed
+2023-01-05T11:08:23.2298296Z latest: digest: sha256:06a41806ed9b610ba1e187d3af1392e515e9a564dedc3fc49fd9e93ce4f99f62 size: 4303
+2023-01-05T11:08:23.2535759Z The push refers to repository [us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments]
+2023-01-05T11:08:23.4501859Z eddef87f10a8: Preparing
+2023-01-05T11:08:23.4503343Z 7271a875b234: Preparing
+2023-01-05T11:08:23.4506226Z 1dd2d1154208: Preparing
+2023-01-05T11:08:23.4506549Z 4eca1cb55695: Preparing
+2023-01-05T11:08:23.4507142Z b7a87f159694: Preparing
+2023-01-05T11:08:23.4507438Z c938b69ebbee: Preparing
+2023-01-05T11:08:23.4507731Z ccde0ac320d2: Preparing
+2023-01-05T11:08:23.4508032Z ca58ff4a49fd: Preparing
+2023-01-05T11:08:23.4508520Z 2a00eb0c8c64: Preparing
+2023-01-05T11:08:23.4508793Z 29c1749bb840: Preparing
+2023-01-05T11:08:23.4542133Z 214c5ced380f: Preparing
+2023-01-05T11:08:23.4542458Z 06c3a4b08733: Preparing
+2023-01-05T11:08:23.4542871Z a7142c30f7fa: Preparing
+2023-01-05T11:08:23.4543359Z 0dcd7928f919: Preparing
+2023-01-05T11:08:23.4587643Z 9bfb7491506e: Preparing
+2023-01-05T11:08:23.4587996Z f9ec282bb452: Preparing
+2023-01-05T11:08:23.4588288Z 52cc52935146: Preparing
+2023-01-05T11:08:23.4588570Z ec3c4788435a: Preparing
+2023-01-05T11:08:23.4588852Z 8a70d251b653: Preparing
+2023-01-05T11:08:23.4589132Z 214c5ced380f: Waiting
+2023-01-05T11:08:23.4589416Z 06c3a4b08733: Waiting
+2023-01-05T11:08:23.4589710Z a7142c30f7fa: Waiting
+2023-01-05T11:08:23.4590004Z 0dcd7928f919: Waiting
+2023-01-05T11:08:23.4590285Z c938b69ebbee: Waiting
+2023-01-05T11:08:23.4590562Z 9bfb7491506e: Waiting
+2023-01-05T11:08:23.4590855Z f9ec282bb452: Waiting
+2023-01-05T11:08:23.4591140Z ccde0ac320d2: Waiting
+2023-01-05T11:08:23.4591424Z ca58ff4a49fd: Waiting
+2023-01-05T11:08:23.4591994Z 2a00eb0c8c64: Waiting
+2023-01-05T11:08:23.4592276Z 52cc52935146: Waiting
+2023-01-05T11:08:23.4592546Z 29c1749bb840: Waiting
+2023-01-05T11:08:23.4592825Z ec3c4788435a: Waiting
+2023-01-05T11:08:23.4593094Z 8a70d251b653: Waiting
+2023-01-05T11:08:23.7598655Z 4eca1cb55695: Layer already exists
+2023-01-05T11:08:23.8495676Z c938b69ebbee: Layer already exists
+2023-01-05T11:08:23.9036672Z eddef87f10a8: Layer already exists
+2023-01-05T11:08:23.9065006Z 1dd2d1154208: Layer already exists
+2023-01-05T11:08:23.9153362Z 7271a875b234: Layer already exists
+2023-01-05T11:08:23.9282439Z b7a87f159694: Layer already exists
+2023-01-05T11:08:23.9972254Z 29c1749bb840: Layer already exists
+2023-01-05T11:08:24.0034942Z 214c5ced380f: Layer already exists
+2023-01-05T11:08:24.0764219Z ccde0ac320d2: Layer already exists
+2023-01-05T11:08:24.0785011Z 06c3a4b08733: Layer already exists
+2023-01-05T11:08:24.1261381Z 2a00eb0c8c64: Layer already exists
+2023-01-05T11:08:24.1339642Z ca58ff4a49fd: Layer already exists
+2023-01-05T11:08:24.1541028Z 9bfb7491506e: Layer already exists
+2023-01-05T11:08:24.2128705Z f9ec282bb452: Layer already exists
+2023-01-05T11:08:24.2245718Z a7142c30f7fa: Layer already exists
+2023-01-05T11:08:24.2314194Z ec3c4788435a: Layer already exists
+2023-01-05T11:08:24.2925523Z 0dcd7928f919: Layer already exists
+2023-01-05T11:08:24.2976689Z 8a70d251b653: Layer already exists
+2023-01-05T11:08:24.3544442Z 52cc52935146: Layer already exists
+2023-01-05T11:08:24.6030139Z c0695e9cc92f26e96fa4d2b9f6676c271cc70eba: digest: sha256:06a41806ed9b610ba1e187d3af1392e515e9a564dedc3fc49fd9e93ce4f99f62 size: 4303
+2023-01-05T11:08:24.6095270Z ##[group]Run gcloud compute instances delete "prefect-cloud-vm" --zone "us-east1-b" --quiet --verbosity none
+2023-01-05T11:08:24.6095970Z [36;1mgcloud compute instances delete "prefect-cloud-vm" --zone "us-east1-b" --quiet --verbosity none[0m
+2023-01-05T11:08:24.6150414Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:08:24.6150825Z env:
+2023-01-05T11:08:24.6151306Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:08:24.6151945Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:08:24.6152544Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:08:24.6153182Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:08:24.6153595Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:08:24.6153970Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:08:24.6154338Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:08:24.6154722Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:08:24.6155159Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:08:24.6155695Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:08:24.6156354Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:08:24.6156836Z ##[endgroup]
+2023-01-05T11:09:36.2783367Z Deleted [https://www.googleapis.com/compute/v1/projects/nivaria-data-platform/zones/us-east1-b/instances/prefect-cloud-vm].
+2023-01-05T11:09:36.4618551Z ##[group]Run gcloud compute resource-policies delete prefect-vm-schedule \
+2023-01-05T11:09:36.4619149Z [36;1mgcloud compute resource-policies delete prefect-vm-schedule \[0m
+2023-01-05T11:09:36.4619581Z [36;1m  --region="us-east1"[0m
+2023-01-05T11:09:36.4674198Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:09:36.4674581Z env:
+2023-01-05T11:09:36.4675051Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:36.4675678Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:36.4676264Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:36.4676887Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:09:36.4677287Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:09:36.4677835Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:36.4678210Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:09:36.4678599Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:36.4679031Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:09:36.4679564Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:09:36.4680211Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:36.4680696Z ##[endgroup]
+2023-01-05T11:09:38.1948634Z Deleted [https://www.googleapis.com/compute/v1/projects/nivaria-data-platform/regions/us-east1/resourcePolicies/prefect-vm-schedule].
+2023-01-05T11:09:38.3338251Z ##[group]Run gcloud compute resource-policies create instance-schedule prefect-vm-schedule \
+2023-01-05T11:09:38.3338924Z [36;1mgcloud compute resource-policies create instance-schedule prefect-vm-schedule \[0m
+2023-01-05T11:09:38.3339481Z [36;1m  --description='Schedule for Prefect VM start and stop times' \[0m
+2023-01-05T11:09:38.3339908Z [36;1m  --region="us-east1" \[0m
+2023-01-05T11:09:38.3340277Z [36;1m  --vm-start-schedule="0 8 * * 1-5" \[0m
+2023-01-05T11:09:38.3340674Z [36;1m  --vm-stop-schedule="0 16 * * 1-5" \[0m
+2023-01-05T11:09:38.3341031Z [36;1m  --timezone=UTC[0m
+2023-01-05T11:09:38.3394908Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:09:38.3395293Z env:
+2023-01-05T11:09:38.3395762Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:38.3396403Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:38.3396989Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:38.3397474Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:09:38.3397866Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:09:38.3398239Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:38.3398599Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:09:38.3399130Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:38.3399566Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:09:38.3400087Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:09:38.3400746Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:38.3401227Z ##[endgroup]
+2023-01-05T11:09:40.0338524Z Created [https://www.googleapis.com/compute/v1/projects/nivaria-data-platform/regions/us-east1/resourcePolicies/prefect-vm-schedule].
+2023-01-05T11:09:40.3993127Z ##[group]Run export EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')
+2023-01-05T11:09:40.3993689Z [36;1mexport EMAIL=$(cat $GOOGLE_GHA_CREDS_PATH | jq -r '.["client_email"]')[0m
+2023-01-05T11:09:40.3994205Z [36;1mgcloud compute instances create-with-container "prefect-cloud-vm" \[0m
+2023-01-05T11:09:40.3994649Z [36;1m  --service-account $EMAIL \[0m
+2023-01-05T11:09:40.3995010Z [36;1m  --zone "us-east1-b" \[0m
+2023-01-05T11:09:40.3995351Z [36;1m  --machine-type "e2-micro" \[0m
+2023-01-05T11:09:40.3995714Z [36;1m  --scopes "cloud-platform" \[0m
+2023-01-05T11:09:40.3996285Z [36;1m  --container-image "us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba"[0m
+2023-01-05T11:09:40.4049247Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:09:40.4049634Z env:
+2023-01-05T11:09:40.4050085Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:40.4050714Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:40.4051423Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:40.4051922Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:09:40.4052322Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:09:40.4052700Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:40.4053061Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:09:40.4053446Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:40.4053893Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:09:40.4054420Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:09:40.4055060Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:40.4055537Z ##[endgroup]
+2023-01-05T11:09:50.9099266Z Created [https://www.googleapis.com/compute/v1/projects/nivaria-data-platform/zones/us-east1-b/instances/prefect-cloud-vm].
+2023-01-05T11:09:51.1891207Z NAME              ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS
+2023-01-05T11:09:51.1892368Z prefect-cloud-vm  us-east1-b  e2-micro                   10.142.0.7   35.185.105.191  RUNNING
+2023-01-05T11:09:51.3224013Z ##[group]Run gcloud compute instances add-resource-policies "prefect-cloud-vm" \
+2023-01-05T11:09:51.3224610Z [36;1mgcloud compute instances add-resource-policies "prefect-cloud-vm" \[0m
+2023-01-05T11:09:51.3225122Z [36;1m  --resource-policies='prefect-vm-schedule' \[0m
+2023-01-05T11:09:51.3225526Z [36;1m  --zone "us-east1-b"[0m
+2023-01-05T11:09:51.3278465Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+2023-01-05T11:09:51.3278848Z env:
+2023-01-05T11:09:51.3279308Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:51.3279937Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:51.3280520Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
+2023-01-05T11:09:51.3280995Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
+2023-01-05T11:09:51.3281386Z   CLOUDSDK_PROJECT: nivaria-data-platform
+2023-01-05T11:09:51.3281902Z   GCLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:51.3282273Z   GCP_PROJECT: nivaria-data-platform
+2023-01-05T11:09:51.3282653Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:51.3283082Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+2023-01-05T11:09:51.3283600Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
+2023-01-05T11:09:51.3284244Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:51.3284728Z ##[endgroup]
+2023-01-05T11:09:54.8101814Z Updated [https://www.googleapis.com/compute/v1/projects/nivaria-data-platform/zones/us-east1-b/instances/prefect-cloud-vm].

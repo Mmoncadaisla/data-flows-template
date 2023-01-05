@@ -1,0 +1,153 @@
+2023-01-05T11:06:45.9447487Z ##[group]Run actions/checkout@v3
+2023-01-05T11:06:45.9448128Z with:
+2023-01-05T11:06:45.9448569Z   repository: Mmoncadaisla/data-flows
+2023-01-05T11:06:45.9449432Z   token: ***
+2023-01-05T11:06:45.9449855Z   ssh-strict: true
+2023-01-05T11:06:45.9450306Z   persist-credentials: true
+2023-01-05T11:06:45.9450774Z   clean: true
+2023-01-05T11:06:45.9451187Z   fetch-depth: 1
+2023-01-05T11:06:45.9451641Z   lfs: false
+2023-01-05T11:06:45.9452093Z   submodules: false
+2023-01-05T11:06:45.9452542Z   set-safe-directory: true
+2023-01-05T11:06:45.9453006Z ##[endgroup]
+2023-01-05T11:06:46.2276931Z Syncing repository: Mmoncadaisla/data-flows
+2023-01-05T11:06:46.2278950Z ##[group]Getting Git version info
+2023-01-05T11:06:46.2279577Z Working directory is '/home/runner/work/data-flows/data-flows'
+2023-01-05T11:06:46.2280285Z [command]/usr/bin/git version
+2023-01-05T11:06:46.2370777Z git version 2.38.2
+2023-01-05T11:06:46.2396869Z ##[endgroup]
+2023-01-05T11:06:46.2417542Z Temporarily overriding HOME='/home/runner/work/_temp/4bf1ca70-3654-4f3d-a71f-89c20fd75f17' before making global git config changes
+2023-01-05T11:06:46.2418281Z Adding repository directory to the temporary git global config as a safe directory
+2023-01-05T11:06:46.2419348Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/data-flows/data-flows
+2023-01-05T11:06:46.2464496Z Deleting the contents of '/home/runner/work/data-flows/data-flows'
+2023-01-05T11:06:46.2469692Z ##[group]Initializing the repository
+2023-01-05T11:06:46.2473261Z [command]/usr/bin/git init /home/runner/work/data-flows/data-flows
+2023-01-05T11:06:46.2539463Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-01-05T11:06:46.2540367Z hint: is subject to change. To configure the initial branch name to use in all
+2023-01-05T11:06:46.2541709Z hint: of your new repositories, which will suppress this warning, call:
+2023-01-05T11:06:46.2542488Z hint: 
+2023-01-05T11:06:46.2543148Z hint: 	git config --global init.defaultBranch <name>
+2023-01-05T11:06:46.2543991Z hint: 
+2023-01-05T11:06:46.2544627Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-01-05T11:06:46.2545826Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-01-05T11:06:46.2546418Z hint: 
+2023-01-05T11:06:46.2547134Z hint: 	git branch -m <name>
+2023-01-05T11:06:46.2551556Z Initialized empty Git repository in /home/runner/work/data-flows/data-flows/.git/
+2023-01-05T11:06:46.2560716Z [command]/usr/bin/git remote add origin https://github.com/Mmoncadaisla/data-flows
+2023-01-05T11:06:46.2602779Z ##[endgroup]
+2023-01-05T11:06:46.2603715Z ##[group]Disabling automatic garbage collection
+2023-01-05T11:06:46.2606932Z [command]/usr/bin/git config --local gc.auto 0
+2023-01-05T11:06:46.2638290Z ##[endgroup]
+2023-01-05T11:06:46.2639230Z ##[group]Setting up auth
+2023-01-05T11:06:46.2646564Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-01-05T11:06:46.2680820Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-01-05T11:06:46.2993017Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-01-05T11:06:46.3025771Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-01-05T11:06:46.3245510Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-01-05T11:06:46.3286782Z ##[endgroup]
+2023-01-05T11:06:46.3287782Z ##[group]Fetching the repository
+2023-01-05T11:06:46.3296186Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c0695e9cc92f26e96fa4d2b9f6676c271cc70eba:refs/remotes/origin/development
+2023-01-05T11:06:46.7317708Z remote: Enumerating objects: 48, done.        
+2023-01-05T11:06:46.7372667Z remote: Counting objects:   2% (1/48)        
+2023-01-05T11:06:46.7373163Z remote: Counting objects:   4% (2/48)        
+2023-01-05T11:06:46.7373561Z remote: Counting objects:   6% (3/48)        
+2023-01-05T11:06:46.7373927Z remote: Counting objects:   8% (4/48)        
+2023-01-05T11:06:46.7374364Z remote: Counting objects:  10% (5/48)        
+2023-01-05T11:06:46.7374741Z remote: Counting objects:  12% (6/48)        
+2023-01-05T11:06:46.7375112Z remote: Counting objects:  14% (7/48)        
+2023-01-05T11:06:46.7375474Z remote: Counting objects:  16% (8/48)        
+2023-01-05T11:06:46.7375830Z remote: Counting objects:  18% (9/48)        
+2023-01-05T11:06:46.7376198Z remote: Counting objects:  20% (10/48)        
+2023-01-05T11:06:46.7376580Z remote: Counting objects:  22% (11/48)        
+2023-01-05T11:06:46.7376953Z remote: Counting objects:  25% (12/48)        
+2023-01-05T11:06:46.7377307Z remote: Counting objects:  27% (13/48)        
+2023-01-05T11:06:46.7377683Z remote: Counting objects:  29% (14/48)        
+2023-01-05T11:06:46.7378053Z remote: Counting objects:  31% (15/48)        
+2023-01-05T11:06:46.7378422Z remote: Counting objects:  33% (16/48)        
+2023-01-05T11:06:46.7378768Z remote: Counting objects:  35% (17/48)        
+2023-01-05T11:06:46.7379109Z remote: Counting objects:  37% (18/48)        
+2023-01-05T11:06:46.7379506Z remote: Counting objects:  39% (19/48)        
+2023-01-05T11:06:46.7379866Z remote: Counting objects:  41% (20/48)        
+2023-01-05T11:06:46.7380210Z remote: Counting objects:  43% (21/48)        
+2023-01-05T11:06:46.7380551Z remote: Counting objects:  45% (22/48)        
+2023-01-05T11:06:46.7380889Z remote: Counting objects:  47% (23/48)        
+2023-01-05T11:06:46.7381404Z remote: Counting objects:  50% (24/48)        
+2023-01-05T11:06:46.7381761Z remote: Counting objects:  52% (25/48)        
+2023-01-05T11:06:46.7382112Z remote: Counting objects:  54% (26/48)        
+2023-01-05T11:06:46.7382466Z remote: Counting objects:  56% (27/48)        
+2023-01-05T11:06:46.7382895Z remote: Counting objects:  58% (28/48)        
+2023-01-05T11:06:46.7383503Z remote: Counting objects:  60% (29/48)        
+2023-01-05T11:06:46.7383848Z remote: Counting objects:  62% (30/48)        
+2023-01-05T11:06:46.7384199Z remote: Counting objects:  64% (31/48)        
+2023-01-05T11:06:46.7384540Z remote: Counting objects:  66% (32/48)        
+2023-01-05T11:06:46.7384880Z remote: Counting objects:  68% (33/48)        
+2023-01-05T11:06:46.7385219Z remote: Counting objects:  70% (34/48)        
+2023-01-05T11:06:46.7385567Z remote: Counting objects:  72% (35/48)        
+2023-01-05T11:06:46.7385913Z remote: Counting objects:  75% (36/48)        
+2023-01-05T11:06:46.7386257Z remote: Counting objects:  77% (37/48)        
+2023-01-05T11:06:46.7386596Z remote: Counting objects:  79% (38/48)        
+2023-01-05T11:06:46.7386935Z remote: Counting objects:  81% (39/48)        
+2023-01-05T11:06:46.7387278Z remote: Counting objects:  83% (40/48)        
+2023-01-05T11:06:46.7387616Z remote: Counting objects:  85% (41/48)        
+2023-01-05T11:06:46.7387955Z remote: Counting objects:  87% (42/48)        
+2023-01-05T11:06:46.7388292Z remote: Counting objects:  89% (43/48)        
+2023-01-05T11:06:46.7388631Z remote: Counting objects:  91% (44/48)        
+2023-01-05T11:06:46.7388964Z remote: Counting objects:  93% (45/48)        
+2023-01-05T11:06:46.7389303Z remote: Counting objects:  95% (46/48)        
+2023-01-05T11:06:46.7389695Z remote: Counting objects:  97% (47/48)        
+2023-01-05T11:06:46.7390029Z remote: Counting objects: 100% (48/48)        
+2023-01-05T11:06:46.7390399Z remote: Counting objects: 100% (48/48), done.        
+2023-01-05T11:06:46.7390809Z remote: Compressing objects:   2% (1/40)        
+2023-01-05T11:06:46.7391216Z remote: Compressing objects:   5% (2/40)        
+2023-01-05T11:06:46.7391603Z remote: Compressing objects:   7% (3/40)        
+2023-01-05T11:06:46.7391990Z remote: Compressing objects:  10% (4/40)        
+2023-01-05T11:06:46.7392358Z remote: Compressing objects:  12% (5/40)        
+2023-01-05T11:06:46.7392798Z remote: Compressing objects:  15% (6/40)        
+2023-01-05T11:06:46.7393160Z remote: Compressing objects:  17% (7/40)        
+2023-01-05T11:06:46.7393528Z remote: Compressing objects:  20% (8/40)        
+2023-01-05T11:06:46.7393890Z remote: Compressing objects:  22% (9/40)        
+2023-01-05T11:06:46.7394265Z remote: Compressing objects:  25% (10/40)        
+2023-01-05T11:06:46.7503866Z remote: Compressing objects:  27% (11/40)        
+2023-01-05T11:06:46.7504320Z remote: Compressing objects:  30% (12/40)        
+2023-01-05T11:06:46.7504688Z remote: Compressing objects:  32% (13/40)        
+2023-01-05T11:06:46.7505422Z remote: Compressing objects:  35% (14/40)        
+2023-01-05T11:06:46.7505822Z remote: Compressing objects:  37% (15/40)        
+2023-01-05T11:06:46.7506184Z remote: Compressing objects:  40% (16/40)        
+2023-01-05T11:06:46.7506543Z remote: Compressing objects:  42% (17/40)        
+2023-01-05T11:06:46.7506898Z remote: Compressing objects:  45% (18/40)        
+2023-01-05T11:06:46.7507256Z remote: Compressing objects:  47% (19/40)        
+2023-01-05T11:06:46.7508211Z remote: Compressing objects:  50% (20/40)        
+2023-01-05T11:06:46.7508912Z remote: Compressing objects:  52% (21/40)        
+2023-01-05T11:06:46.7509271Z remote: Compressing objects:  55% (22/40)        
+2023-01-05T11:06:46.7509618Z remote: Compressing objects:  57% (23/40)        
+2023-01-05T11:06:46.7509962Z remote: Compressing objects:  60% (24/40)        
+2023-01-05T11:06:46.7510325Z remote: Compressing objects:  62% (25/40)        
+2023-01-05T11:06:46.7510674Z remote: Compressing objects:  65% (26/40)        
+2023-01-05T11:06:46.7511024Z remote: Compressing objects:  67% (27/40)        
+2023-01-05T11:06:46.7511727Z remote: Compressing objects:  70% (28/40)        
+2023-01-05T11:06:46.7512394Z remote: Compressing objects:  72% (29/40)        
+2023-01-05T11:06:46.7512747Z remote: Compressing objects:  75% (30/40)        
+2023-01-05T11:06:46.7513123Z remote: Compressing objects:  77% (31/40)        
+2023-01-05T11:06:46.7513488Z remote: Compressing objects:  80% (32/40)        
+2023-01-05T11:06:46.7514009Z remote: Compressing objects:  82% (33/40)        
+2023-01-05T11:06:46.7514363Z remote: Compressing objects:  85% (34/40)        
+2023-01-05T11:06:46.7514836Z remote: Compressing objects:  87% (35/40)        
+2023-01-05T11:06:46.7516358Z remote: Compressing objects:  90% (36/40)        
+2023-01-05T11:06:46.7516966Z remote: Compressing objects:  92% (37/40)        
+2023-01-05T11:06:46.7517441Z remote: Compressing objects:  95% (38/40)        
+2023-01-05T11:06:46.7517891Z remote: Compressing objects:  97% (39/40)        
+2023-01-05T11:06:46.7518377Z remote: Compressing objects: 100% (40/40)        
+2023-01-05T11:06:46.7518863Z remote: Compressing objects: 100% (40/40), done.        
+2023-01-05T11:06:46.7647483Z remote: Total 48 (delta 8), reused 20 (delta 1), pack-reused 0        
+2023-01-05T11:06:46.7777994Z From https://github.com/Mmoncadaisla/data-flows
+2023-01-05T11:06:46.7778976Z  * [new ref]         c0695e9cc92f26e96fa4d2b9f6676c271cc70eba -> origin/development
+2023-01-05T11:06:46.7806181Z ##[endgroup]
+2023-01-05T11:06:46.7807070Z ##[group]Determining the checkout info
+2023-01-05T11:06:46.7808515Z ##[endgroup]
+2023-01-05T11:06:46.7809543Z ##[group]Checking out the ref
+2023-01-05T11:06:46.7875811Z [command]/usr/bin/git checkout --progress --force -B development refs/remotes/origin/development
+2023-01-05T11:06:46.7887429Z Switched to a new branch 'development'
+2023-01-05T11:06:46.7887996Z branch 'development' set up to track 'origin/development'.
+2023-01-05T11:06:46.7894815Z ##[endgroup]
+2023-01-05T11:06:46.7934627Z [command]/usr/bin/git log -1 --format='%H'
+2023-01-05T11:06:46.7964150Z 'c0695e9cc92f26e96fa4d2b9f6676c271cc70eba'
