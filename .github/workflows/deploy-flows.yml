@@ -13,7 +13,7 @@ on:
 
 
 jobs:
-  deploy-changed-flows-deployments:
+  deploy-flows:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
