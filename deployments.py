@@ -1,7 +1,7 @@
 import os
 import logging
 import argparse
-from dataflows.deployments.constants import FLOW_DEPLOYMENT_DICT
+from dataflows.deployments._constants import FLOW_DEPLOYMENT_DICT
 
 
 def get_file_name_file_extension(file_path: str) -> tuple:
@@ -51,6 +51,7 @@ if __name__ == "__main__":
     if deploy_function:
         logger.info(f"Deploying {flow_file_name}...")
         deploy_function()
+        logger.info(f"Flow {flow_file_name} has been deployed!")
     else:
         logger.info(
             f"No deployment function found for {flow_file_name},"
