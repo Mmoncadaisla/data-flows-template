@@ -1,32 +1,32 @@
-name: 'Docker image for Prefect Cloud execution layer on Google Cloud'
+name: "Docker image for Prefect Cloud execution layer on Google Cloud"
 branding:
   icon: cloud
   color: blue
-description: 'Package your dependencies into a Docker image and push it to Google Artifact Registry'
+description: "Package your dependencies into a Docker image and push it to Google Artifact Registry"
 inputs:
   prefect_api_key:
-    description: 'Prefect Cloud API key'
+    description: "Prefect Cloud API key"
     required: true
   prefect_api_url:
-    description: 'Prefect Cloud API URL'
+    description: "Prefect Cloud API URL"
     required: true
   gcp_credentials_json:
-    description: 'Content of the Service Account JSON key file'
+    description: "Content of the Service Account JSON key file"
     required: true
   region:
-    description: 'GCP region'
+    description: "GCP region"
     required: false
-    default: 'us-east1'
+    default: "us-east1"
   artifact_repository:
-    description: 'Artifact Registry Repository Name'
+    description: "Artifact Registry Repository Name"
     required: false
     default: prefect
   image_name:
-    description: 'Artifact Registry Image Name'
+    description: "Artifact Registry Image Name"
     required: false
     default: deployments
   dockerfile_path:
-    description: 'Path and filename of the Dockerfile'
+    description: "Path and filename of the Dockerfile"
     required: false
     default: Dockerfile
 runs:
@@ -55,7 +55,7 @@ runs:
     - name: Login to GAR
       uses: docker/login-action@v2
       with:
-        registry: '${{ inputs.region }}-docker.pkg.dev'
+        registry: "${{ inputs.region }}-docker.pkg.dev"
         username: _json_key
         password: ${{ inputs.gcp_credentials_json }}
 

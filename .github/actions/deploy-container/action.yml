@@ -1,50 +1,50 @@
-name: 'Prefect Cloud execution layer on Google Cloud Run'
+name: "Prefect Cloud execution layer on Google Cloud Run"
 branding:
   icon: cloud
   color: blue
-description: 'Package your dependencies into a Docker image and deploy Prefect Cloud execution layer to Google Compute Engine'
+description: "Package your dependencies into a Docker image and deploy Prefect Cloud execution layer to Google Compute Engine"
 inputs:
   prefect_api_key:
-    description: 'Prefect Cloud API key'
+    description: "Prefect Cloud API key"
     required: true
   prefect_api_url:
-    description: 'Prefect Cloud API URL'
+    description: "Prefect Cloud API URL"
     required: true
   gcp_credentials_json:
-    description: 'Content of the Service Account JSON key file'
+    description: "Content of the Service Account JSON key file"
     required: true
   region:
-    description: 'GCP region'
+    description: "GCP region"
     required: false
-    default: 'us-east1'
+    default: "us-east1"
   artifact_repository:
-    description: 'Artifact Registry Repository Name'
+    description: "Artifact Registry Repository Name"
     required: false
     default: prefect
   image_name:
-    description: 'Artifact Registry Image Name'
+    description: "Artifact Registry Image Name"
     required: false
     default: deployments
   zone:
-    description: 'GCP region with the zone'
+    description: "GCP region with the zone"
     required: false
-    default: 'us-east1-b'
+    default: "us-east1-b"
   machine_type:
-    description: 'GCP Compute Engine instance type'
+    description: "GCP Compute Engine instance type"
     required: false
-    default: 'e2-micro'
+    default: "e2-micro"
   machine_name:
-    description: 'GCP Compute Engine instance name'
+    description: "GCP Compute Engine instance name"
     required: false
-    default: 'prefect-cloud-vm'
+    default: "prefect-cloud-vm"
   machine-start-schedule:
-    description: 'VM schedule cron expression for start in UTC'
+    description: "VM schedule cron expression for start in UTC"
     required: false
-    default: '0 8 * * 1-5'
+    default: "0 8 * * 1-5"
   machine-stop-schedule:
-    description: 'VM schedule cron expression for stop in UTC'
+    description: "VM schedule cron expression for stop in UTC"
     required: false
-    default: '0 16 * * 1-5'
+    default: "0 16 * * 1-5"
 runs:
   using: "composite"
   steps:
