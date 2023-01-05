@@ -4,7 +4,7 @@ This environment contains everything you need to run Prefect Orion, a Prefect ag
 
 # Prerequisites
 
-* A Linux, MacOS, or Windows computer or VM with Docker installed. If you are running Windows, you must have Docker set up to use Linux containers, not Windows containers.
+* A Linux, MacOS, or Windows computer or VM with Docker and Docker-Compose installed. If you are running Windows, you must have Docker set up to use Linux containers, not Windows containers.
 
 # Limitations
 * If you run a Prefect agent in Docker, it will not be able to run `DockerContainer` deployments unless you share the host's Docker socket with the agent container because Docker-in-Docker is not supported.
@@ -41,17 +41,16 @@ Next, open another terminal in the same directory and run:
 docker-compose run cli
 ```
 
-This runs an interactive Bash session in a container that shares a Docker network with the Orion server you just started. If you run `ls`, you will see that the container shares the `flows` subdirectory of the repository on the host machine:
+This runs an interactive Bash session in a container that shares a Docker network with the Orion server you just started. If you run `ls`, you will see that the container shares the `dataflows/flows` subdirectory of the repository on the host machine:
 
 ```
-flow.py
 root@fb032110b1c1:~/flows#
 ```
 
 To demonstrate the container is connected to the Orion API you launched earlier, run:
 
 ```
-python flow.py
+python hello_flow.py
 ```
 
 Then, in a web browser on your host machine, navigate to `http://localhost:4200/runs` and you will see the flow you just ran in your CLI container.
