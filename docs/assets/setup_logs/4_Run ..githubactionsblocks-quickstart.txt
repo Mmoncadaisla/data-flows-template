@@ -5,7 +5,7 @@
 2023-01-05T11:09:56.1154121Z with:
 2023-01-05T11:09:56.1154512Z   prefect_api_key: ***
 2023-01-05T11:09:56.1155077Z   prefect_api_url: ***
-2023-01-05T11:09:56.1155586Z   image_uri: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:56.1155586Z   image_uri: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:09:56.1156081Z   block_name: default
 2023-01-05T11:09:56.1156372Z   region: us-east1
 2023-01-05T11:09:56.1156660Z   python_version: 3.10
@@ -14,14 +14,14 @@
 2023-01-05T11:09:56.1157724Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:56.1158347Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:56.1158953Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
-2023-01-05T11:09:56.1159439Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1159828Z   CLOUDSDK_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1160205Z   GCLOUD_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1160569Z   GCP_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1160944Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:56.1159439Z   CLOUDSDK_CORE_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1159828Z   CLOUDSDK_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1160205Z   GCLOUD_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1160569Z   GCP_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1160944Z   GOOGLE_CLOUD_PROJECT: my-google-cloud-project
 2023-01-05T11:09:56.1161377Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
-2023-01-05T11:09:56.1161890Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
-2023-01-05T11:09:56.1162523Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:56.1161890Z   RAW_IMAGE: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments
+2023-01-05T11:09:56.1162523Z   IMAGE_URI: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:09:56.1163002Z ##[endgroup]
 2023-01-05T11:09:56.1223283Z ##[group]Run actions/setup-python@v4
 2023-01-05T11:09:56.1223636Z with:
@@ -34,14 +34,14 @@
 2023-01-05T11:09:56.1225972Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:56.1226596Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:56.1227176Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
-2023-01-05T11:09:56.1227647Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1228035Z   CLOUDSDK_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1228402Z   GCLOUD_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1228768Z   GCP_PROJECT: nivaria-data-platform
-2023-01-05T11:09:56.1229140Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:56.1227647Z   CLOUDSDK_CORE_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1228035Z   CLOUDSDK_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1228402Z   GCLOUD_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1228768Z   GCP_PROJECT: my-google-cloud-project
+2023-01-05T11:09:56.1229140Z   GOOGLE_CLOUD_PROJECT: my-google-cloud-project
 2023-01-05T11:09:56.1229574Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
-2023-01-05T11:09:56.1230097Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
-2023-01-05T11:09:56.1230838Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:56.1230097Z   RAW_IMAGE: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments
+2023-01-05T11:09:56.1230838Z   IMAGE_URI: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:09:56.1231330Z ##[endgroup]
 2023-01-05T11:09:56.2967173Z ##[group]Installed versions
 2023-01-05T11:09:56.3079998Z Successfully set up CPython (3.10.9)
@@ -61,14 +61,14 @@
 2023-01-05T11:09:59.4618696Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:59.4619336Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:09:59.4619934Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
-2023-01-05T11:09:59.4620448Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
-2023-01-05T11:09:59.4620853Z   CLOUDSDK_PROJECT: nivaria-data-platform
-2023-01-05T11:09:59.4621344Z   GCLOUD_PROJECT: nivaria-data-platform
-2023-01-05T11:09:59.4621729Z   GCP_PROJECT: nivaria-data-platform
-2023-01-05T11:09:59.4622121Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:09:59.4620448Z   CLOUDSDK_CORE_PROJECT: my-google-cloud-project
+2023-01-05T11:09:59.4620853Z   CLOUDSDK_PROJECT: my-google-cloud-project
+2023-01-05T11:09:59.4621344Z   GCLOUD_PROJECT: my-google-cloud-project
+2023-01-05T11:09:59.4621729Z   GCP_PROJECT: my-google-cloud-project
+2023-01-05T11:09:59.4622121Z   GOOGLE_CLOUD_PROJECT: my-google-cloud-project
 2023-01-05T11:09:59.4622562Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
-2023-01-05T11:09:59.4623093Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
-2023-01-05T11:09:59.4623743Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:09:59.4623093Z   RAW_IMAGE: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments
+2023-01-05T11:09:59.4623743Z   IMAGE_URI: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:09:59.4624310Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.9/x64
 2023-01-05T11:09:59.4624794Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
 2023-01-05T11:09:59.4625259Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.9/x64
@@ -419,14 +419,14 @@
 2023-01-05T11:10:31.0228855Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:10:31.0229494Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:10:31.0230085Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
-2023-01-05T11:10:31.0230596Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
-2023-01-05T11:10:31.0231002Z   CLOUDSDK_PROJECT: nivaria-data-platform
-2023-01-05T11:10:31.0231390Z   GCLOUD_PROJECT: nivaria-data-platform
-2023-01-05T11:10:31.0231770Z   GCP_PROJECT: nivaria-data-platform
-2023-01-05T11:10:31.0232153Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:10:31.0230596Z   CLOUDSDK_CORE_PROJECT: my-google-cloud-project
+2023-01-05T11:10:31.0231002Z   CLOUDSDK_PROJECT: my-google-cloud-project
+2023-01-05T11:10:31.0231390Z   GCLOUD_PROJECT: my-google-cloud-project
+2023-01-05T11:10:31.0231770Z   GCP_PROJECT: my-google-cloud-project
+2023-01-05T11:10:31.0232153Z   GOOGLE_CLOUD_PROJECT: my-google-cloud-project
 2023-01-05T11:10:31.0232595Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
-2023-01-05T11:10:31.0233130Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
-2023-01-05T11:10:31.0233777Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:10:31.0233130Z   RAW_IMAGE: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments
+2023-01-05T11:10:31.0233777Z   IMAGE_URI: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:10:31.0234353Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.9/x64
 2023-01-05T11:10:31.0234835Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
 2023-01-05T11:10:31.0235301Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.9/x64
@@ -436,25 +436,25 @@
 2023-01-05T11:10:31.0236987Z ##[endgroup]
 2023-01-05T11:10:34.6181626Z Set 'PREFECT_API_KEY' to '***'.
 2023-01-05T11:10:34.6182806Z Updated profile 'default'.
-2023-01-05T11:10:37.7348611Z Set 'PREFECT_API_URL' to 
+2023-01-05T11:10:37.7348611Z Set 'PREFECT_API_URL' to
 2023-01-05T11:10:37.7349558Z 'https://api.prefect.cloud/api/accounts/0d373dc9-4403-4748-abdb-a57870ce39cb/wor
 2023-01-05T11:10:37.7397428Z kspaces/4a8c8d91-4d68-41e0-972a-078efbb989d9'.
 2023-01-05T11:10:37.7397867Z Updated profile 'default'.
-2023-01-05T11:10:38.1321882Z ##[group]Run python /home/runner/work/data-flows/data-flows/./.github/actions/blocks-quickstart/blocks.py -b $GITHUB_REF_NAME -r $GITHUB_SERVER_URL/$GITHUB_REPOSITORY -n default -i us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba --region us-east1
-2023-01-05T11:10:38.1323153Z [36;1mpython /home/runner/work/data-flows/data-flows/./.github/actions/blocks-quickstart/blocks.py -b $GITHUB_REF_NAME -r $GITHUB_SERVER_URL/$GITHUB_REPOSITORY -n default -i us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba --region us-east1[0m
+2023-01-05T11:10:38.1321882Z ##[group]Run python /home/runner/work/data-flows/data-flows/./.github/actions/blocks-quickstart/blocks.py -b $GITHUB_REF_NAME -r $GITHUB_SERVER_URL/$GITHUB_REPOSITORY -n default -i us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba --region us-east1
+2023-01-05T11:10:38.1323153Z [36;1mpython /home/runner/work/data-flows/data-flows/./.github/actions/blocks-quickstart/blocks.py -b $GITHUB_REF_NAME -r $GITHUB_SERVER_URL/$GITHUB_REPOSITORY -n default -i us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba --region us-east1[0m
 2023-01-05T11:10:38.1378240Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
 2023-01-05T11:10:38.1378632Z env:
 2023-01-05T11:10:38.1379102Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:10:38.1379741Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
 2023-01-05T11:10:38.1380342Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/data-flows/data-flows/gha-creds-a36927e337627a2c.json
-2023-01-05T11:10:38.1380832Z   CLOUDSDK_CORE_PROJECT: nivaria-data-platform
-2023-01-05T11:10:38.1381369Z   CLOUDSDK_PROJECT: nivaria-data-platform
-2023-01-05T11:10:38.1381752Z   GCLOUD_PROJECT: nivaria-data-platform
-2023-01-05T11:10:38.1382124Z   GCP_PROJECT: nivaria-data-platform
-2023-01-05T11:10:38.1382520Z   GOOGLE_CLOUD_PROJECT: nivaria-data-platform
+2023-01-05T11:10:38.1380832Z   CLOUDSDK_CORE_PROJECT: my-google-cloud-project
+2023-01-05T11:10:38.1381369Z   CLOUDSDK_PROJECT: my-google-cloud-project
+2023-01-05T11:10:38.1381752Z   GCLOUD_PROJECT: my-google-cloud-project
+2023-01-05T11:10:38.1382124Z   GCP_PROJECT: my-google-cloud-project
+2023-01-05T11:10:38.1382520Z   GOOGLE_CLOUD_PROJECT: my-google-cloud-project
 2023-01-05T11:10:38.1382962Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
-2023-01-05T11:10:38.1383502Z   RAW_IMAGE: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments
-2023-01-05T11:10:38.1384157Z   IMAGE_URI: us-east1-docker.pkg.dev/nivaria-data-platform/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
+2023-01-05T11:10:38.1383502Z   RAW_IMAGE: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments
+2023-01-05T11:10:38.1384157Z   IMAGE_URI: us-east1-docker.pkg.dev/my-google-cloud-project/prefect/deployments:c0695e9cc92f26e96fa4d2b9f6676c271cc70eba
 2023-01-05T11:10:38.1384728Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.9/x64
 2023-01-05T11:10:38.1385201Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.9/x64/lib/pkgconfig
 2023-01-05T11:10:38.1385668Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.9/x64
