@@ -3,6 +3,12 @@ name: Deploy flows
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
+      - development
+    paths:
+      - "dataflows/flows/**.py"
+      - "dataflows/deployments/**.py"
   pull_request:
     branches:
       - main
