@@ -34,7 +34,7 @@ orion_1     | INFO:     Uvicorn running on http://0.0.0.0:4200 (Press CTRL+C to 
 
 The Orion API container shares port 4200 with the host machine, so if you open a web browser and navigate to `http://localhost:4200` you will see the Prefect Orion UI.
 
-## Prefect CLI
+## Running flows locally with the Prefect CLI
 
 Next, open another terminal in the same directory and run:
 

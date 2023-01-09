@@ -28,6 +28,7 @@ Infrastructure:
 
 Other files of interest:
 
+- `docs` - Documentation for the repository
 - `docker-compose.yml` - Docker Compose file that contains the services for running Prefect Cloud, Prefect Orion, and Prefect Agent, as well as a CLI container for running flows locally
 
 ```
