@@ -7,6 +7,7 @@ This environment contains everything you need to run Prefect Orion, a Prefect ag
 * A Linux, MacOS, or Windows computer or VM with Docker and Docker-Compose installed. If you are running Windows, you must have Docker set up to use Linux containers, not Windows containers.
 
 # Limitations
+
 * If you run a Prefect agent in Docker, it will not be able to run `DockerContainer` deployments unless you share the host's Docker socket with the agent container because Docker-in-Docker is not supported.
 
 # Getting Started
