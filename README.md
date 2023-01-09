@@ -9,7 +9,8 @@ Please find more information around how Prefect works in the [Prefect documentat
 The repository is structured as follows:
 
 - `dataflows` - Python package that contains the flows and deployments for the data pipelines
-- `dataflows/flows` - Python package that contains the flows and deployments for the data pipelines
+  - `flows` - Python module that contains the [flows](https://docs.prefect.io/concepts/flows/) for the data pipelines
+  - `deployments` - Python module that has the [deployment definition](https://docs.prefect.io/concepts/deployments/) files
 - `setup.py` - Python `dataflows` package setup file
 - `tests` - Python tests for the flows. Uses `pytest`, tests are ran using `tox` as part of the CI/CD pipeline.
 - `docs` - Documentation for the repository
@@ -59,7 +60,7 @@ Other files of interest:
 │       ├── __init__.py
 │       └── flows
 │           ├── __init__.py
-│           └── test_hello.py
+│           └── test_hello_flow.py
 └── tox.ini
 ```
 
