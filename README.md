@@ -2,55 +2,55 @@
 
 This repository holds the flows and deployments for the data pipelines that are built using [Prefect](https://www.prefect.io/) using Prefect Cloud and Google Cloud Platform setup based on [this resource](https://github.com/anna-geller/prefect-cloud-gcp).
 
+## Main components
+
+This setup is based on Prefect Cloud & Google Cloud Platform services. The main components are:
+
+- Prefect Cloud
+- [Prefect Agent](https://docs.prefect.io/concepts/work-queues/#agent-overview) (via Google Compute Engine): The agent is responsible for deploying the flow runs to the Prefect Cloud
+- Prefect Runner (via [Google Cloud Run](https://cloud.google.com/run)): Serverless service responsible for processing the flows
+
 Please find more information around how Prefect works in the [Prefect documentation](https://docs.prefect.io/).
 
->**NOTE**: For first time setup, please follow the [initial setup guide](docs/INITIAL_SETUP.md).
+## Initial setup
 
-The repository is structured as follows:
+Please see the [initial setup guide](docs/INITIAL_SETUP.md) for more information if this is the first time you're spinning up the repository's associated infrastructure.
+
+## Repository structure
+
+The repository contains the following main folders:
 
 - `dataflows` - Python package that contains the flows and deployments for the data pipelines
   - `flows` - Python module that contains the [flows](https://docs.prefect.io/concepts/flows/) for the data pipelines
   - `deployments` - Python module that has the [deployment definition](https://docs.prefect.io/concepts/deployments/) files
-- `setup.py` - Python `dataflows` package setup file
-- `tests` - Python tests for the flows. Uses `pytest`, tests are ran using `tox` as part of the CI/CD pipeline.
-- `docs` - Documentation for the repository
-
-CI/CD pipeline:
-
-- `.github/actions` - GitHub Actions for running the CI/CD pipeline
-- `.github/workflows` - GitHub Actions workflows for running the CI/CD pipeline
-- `deployments.py` - Python script that contains the logic for deploying the flows and deployments used by the CI/CD pipeline
-
-Infrastructure:
-
-- `Dockerfile` - *Dockerfile* for the Prefect Agent
-- `requirements.txt` - Python requirements for the Prefect Agent applied via `Dockerfile`
-
-Other files of interest:
-
-- `docs` - Documentation for the repository
-- `docker-compose.yml` - Docker Compose file that contains the services for running Prefect Cloud, Prefect Orion, and Prefect Agent, as well as a CLI container for running flows locally
+- `tests` - Python tests for the flows. Uses `pytest`, tests are ran using `tox` as part of the CI/CD
 
 ```
 .
-├── Dockerfile
 ├── README.md
+├── config
+│   ├── agent
+│   │   └── Dockerfile
+│   └── runner
+│       └── Dockerfile
 ├── dataflows
 │   ├── __init__.py
+│   ├── _version.py
 │   ├── deployments
 │   │   ├── __init__.py
 │   │   ├── _constants.py
 │   │   └── hello_deployment.py
 │   └── flows
 │       ├── __init__.py
-│       └── hello_flow.py
+│       ├── hello_flow.py
+│       └── utils
 ├── deployments.py
 ├── docker-compose.yml
 ├── docs
+│   ├── CONTRIBUTING.md
 │   ├── INITIAL_SETUP.md
 │   ├── LOCAL_DEVELOPMENT.md
 │   ├── assets
-│   │   └── setup_logs
 │   └── img
 ├── requirements.txt
 ├── setup.py
