@@ -29,6 +29,10 @@ inputs:
     description: "GCP region with the zone"
     required: false
     default: "us-east1-b"
+  dockerfile_path:
+    description: "Path to the Dockerfile to build image"
+    required: false
+    default: "Dockerfile"
   machine_type:
     description: "GCP Compute Engine instance type"
     required: false
@@ -64,6 +68,7 @@ runs:
         gcp_credentials_json: ${{ inputs.gcp_credentials_json }}
         region: ${{ inputs.region }}
         artifact_repository: ${{ inputs.artifact_repository }}
+        dockerfile_path: ${{ inputs.dockerfile_path }}
         image_name: ${{ inputs.image_name }}
 
     - id: terminate-if-exists

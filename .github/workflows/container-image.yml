@@ -17,6 +17,11 @@ on:
         required: true
         default: "us-east1"
         type: string
+      dockerfile_path:
+        description: Path to the Dockerfile to build image
+        required: false
+        default: "Dockerfile"
+        type: string
 jobs:
   container-image:
     runs-on: ubuntu-latest
@@ -31,3 +36,4 @@ jobs:
           image_name: ${{ github.event.inputs.image_name }} # optional
           region: ${{ github.event.inputs.region }} # optional
           gcp_credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          dockerfile_path: ${{ github.event.inputs.dockerfile_path }} # optional

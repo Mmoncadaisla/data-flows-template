@@ -44,7 +44,9 @@ services:
 
   ## Prefect Agent
   agent:
-    image: prefecthq/prefect:2.7.6-python3.11
+    build:
+      context: .
+      dockerfile: ./config/agent/Dockerfile
     restart: always
     entrypoint: ["prefect", "agent", "start", "-q", "default"]
     environment:
@@ -55,11 +57,14 @@ services:
 
   ### Prefect CLI
   cli:
-    image: prefecthq/prefect:2.7.6-python3.11
+    build:
+      context: .
+      dockerfile: ./config/runner/Dockerfile
     entrypoint: "bash"
     working_dir: "/root/flows"
     volumes:
       - "./dataflows/flows:/root/flows"
+      - "./requirements.txt:/root/requirements.txt"
     environment:
       - PREFECT_API_URL=http://orion:4200/api
 #       Use PREFECT_API_KEY to use the CLI to interact with Prefect Cloud

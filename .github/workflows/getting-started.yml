@@ -18,9 +18,14 @@ on:
         default: "prefect"
         type: string
       image_name:
-        description: Artifact Container Name
+        description: Artifact Container Name for the Agent
         required: true
         default: "deployments"
+        type: string
+      runner_image_name:
+        description: Artifact Container Name for the Runner
+        required: true
+        default: "runner"
         type: string
       machine_type:
         description: GCP Compute Engine instance type
@@ -37,13 +42,23 @@ on:
         required: false
         default: "default"
         type: string
+      agent_docker_file_path:
+        description: "Path to the Dockerfile to build image for the agent"
+        required: false
+        default: "config/agent/Dockerfile"
+        type: string
+      runner_docker_file_path:
+        description: "Path to the Dockerfile to build image for the runner"
+        required: false
+        default: "config/runner/Dockerfile"
+        type: string
 
 jobs:
   deploy-container:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: deploy-container
+      - id: deploy-agent-container
         uses: ./.github/actions/deploy-container
         with:
           prefect_api_key: ${{ secrets.PREFECT_API_KEY }}
@@ -54,6 +69,19 @@ jobs:
           #          gcp_sa_email: ${{ secrets.GCP_SA_EMAIL }}
           zone: ${{ github.event.inputs.zone }} # optional
           machine_type: ${{ github.event.inputs.machine_type }} # optional
+          docker_file_path: ${{ github.event.inputs.agent_docker_file_path }} # optional
+
+      - id: build-runner-image
+        uses: ./.github/actions/container-image
+        with:
+          prefect_api_key: ${{ secrets.PREFECT_API_KEY }}
+          prefect_api_url: ${{ secrets.PREFECT_API_URL }}
+          artifact_repository: ${{ github.event.inputs.artifact_repository }} # optional
+          region: ${{ github.event.inputs.region }} # optional
+          gcp_credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          #          gcp_sa_email: ${{ secrets.GCP_SA_EMAIL }}
+          docker_file_path: ${{ github.event.inputs.runner_docker_file_path }} # optional
+          image_name: ${{ github.event.inputs.runner_image_name }} # optional
 
       - id: create-blocks
         uses: ./.github/actions/blocks-quickstart
