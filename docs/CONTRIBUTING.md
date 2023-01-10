@@ -45,6 +45,20 @@ In order to contribute to this repository, you will need to have a basic underst
         deployment.apply()
     ```
 
+    The files to be committed at this point would be:
+
+    ```bash
+    ❯ git status
+    On branch Mmoncadaisla/add-new-flow
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        dataflows/deployments/new_deployment.py
+        dataflows/flows/new_flow.py
+        tests/unit/flows/test_new_flow.py
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+
 7. If you have added a deployment definition file to the `deployments` module, add it to the `deployments._constants` module so that the CI can deploy your flow automatically upon flow/deployment file changes.
 
    ```python
@@ -62,10 +76,45 @@ In order to contribute to this repository, you will need to have a basic underst
     }
    ```
 
+    The files to be committed after modifying `_constants.py`:
+
+    ```bash
+    ❯ git status
+    On branch Mmoncadaisla/add-new-flow
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+        modified:   dataflows/deployments/_constants.py
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        dataflows/deployments/new_deployment.py
+        dataflows/flows/new_flow.py
+        tests/unit/flows/test_new_flow.py
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    ```
+
+    ```bash
+    git add --all
+    git commit -m "Add new flow"
+    git push --set-upstream origin Mmoncadaisla/add-new-flow
+    ```
+
+    After the changes are pushed, the CI will run the unit tests and the linter. If the tests pass, you can create a pull request against the `development` branch.
+
+    ![CI](/docs/img/CI_push.png)
+
 8. Open a pull request against the `development` branch and add at least one reviewer. When the PR is created, the CI will run the unit tests and the linter.
 
-    ![CI](../docs/images/CI.png)
+    ![PR](/docs/img/PR_staging.png)
 
-9. After tests have passed and the PR has been approved, merge the PR into the `development` branch. If The CI will automatically deploy your flow to Prefect Cloud:
+    ![PR_checks](/docs/img/pr_checks.png)
 
-    ![Deploy](../docs/images/Deploy.png)
+9. After tests have passed and the PR has been approved, merge the PR into the `development` branch and delete your branch. If a deployment file has been created, and the proper references were added to the `_constants` module, it will automatically deploy your flow to Prefect Cloud!
+
+    You can check this from the GitHub actions tab.
+
+    ![Deployment](/docs/img/flow_deployment.png)
+
+10. Congratulations! You have successfully contributed to the data pipelines! 🚀
