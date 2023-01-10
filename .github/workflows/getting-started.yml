@@ -80,7 +80,7 @@ jobs:
           region: ${{ github.event.inputs.region }} # optional
           gcp_credentials_json: ${{ secrets.GCP_CREDENTIALS }}
           #          gcp_sa_email: ${{ secrets.GCP_SA_EMAIL }}
-          docker_file_path: ${{ github.event.inputs.runner_docker_file_path }} # optional
+          dockerfile_path: ${{ github.event.inputs.runner_docker_file_path }} # optional
           image_name: ${{ github.event.inputs.runner_image_name }} # optional
 
       - id: create-blocks
