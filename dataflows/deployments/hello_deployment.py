@@ -4,7 +4,7 @@ from prefect.orion.schemas.schedules import CronSchedule
 from dataflows.flows.hello_flow import hello_flow
 
 storage = Block.load("gcs/default")
-infrastructure = Block.load("cloud-run-job/develop")
+infrastructure = Block.load("cloud-run-job/default")
 
 
 def deploy_hello_flow():
