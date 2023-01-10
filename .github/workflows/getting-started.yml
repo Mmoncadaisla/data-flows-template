@@ -69,7 +69,7 @@ jobs:
           #          gcp_sa_email: ${{ secrets.GCP_SA_EMAIL }}
           zone: ${{ github.event.inputs.zone }} # optional
           machine_type: ${{ github.event.inputs.machine_type }} # optional
-          docker_file_path: ${{ github.event.inputs.agent_docker_file_path }} # optional
+          dockerfile_path: ${{ github.event.inputs.agent_docker_file_path }} # optional
 
       - id: build-runner-image
         uses: ./.github/actions/container-image
